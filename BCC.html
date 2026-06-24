@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSSM 동아리 관리 시스템</title>
+    <link rel="stylesheet" href="BCC.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ==================== 1. 메인 화면 ==================== -->
+        <div class="page-section active" id="main-screen">
+            <header>
+                <h1>BSSM 동아리 관리</h1>
+                <nav>
+                    <!-- data-target 속성으로 이동할 화면의 id를 지정합니다. -->
+                    <a href="#" data-target="login-screen">로그인</a>
+                    <a href="#" data-target="signup-screen">회원가입</a>
+                </nav>
+            </header>
+            <main>
+                <h2>환영합니다!</h2>
+                <p>부산소프트웨어마이스터고등학교 동아리 관리 시스템입니다.</p>
+                <a href="#" class="btn" data-target="club-list-screen">동아리 둘러보기</a>
+            </main>
+        </div>
+
+        <!-- ==================== 2. 로그인 화면 ==================== -->
+        <div class="page-section" id="login-screen">
+            <h2>로그인</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">로그인</button>
+            </form>
+            <p>계정이 없으신가요? <a href="#" data-target="signup-screen">회원가입</a></p>
+        </div>
+
+        <!-- ==================== 3. 회원가입 화면 ==================== -->
+        <div class="page-section" id="signup-screen">
+            <h2>회원가입</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-number">학번</label>
+                    <input type="text" id="student-number" name="student-number" placeholder="예: 1201" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-signup">이메일</label>
+                    <input type="email" id="email-signup" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password-signup">비밀번호</label>
+                    <input type="password" id="password-signup" name="password" required>
+                </div>
+                <button type="submit" class="btn">가입하기</button>
+            </form>
+            <p>이미 계정이 있으신가요? <a href="#" data-target="login-screen">로그인</a></p>
+        </div>
+        
+        <!-- 여기에 나머지 6개의 화면(동아리 목록, 상세 등)도 같은 방식으로 추가할 수 있습니다. -->
+
+    </div>
+
+    <!-- 스크립트 파일은 body 태그가 닫히기 직전에 연결합니다. -->
+    <script src="BCC.js"></script>
+</body>
+</html>
